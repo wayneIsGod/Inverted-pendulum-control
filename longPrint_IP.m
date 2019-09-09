@@ -1,0 +1,12 @@
+clear;clc;close all;
+stick_long=5; g=9.8; car_angle=pi/3;
+[t,x]=ode23(@IP_long,[0 100],[-1 0 0 0 -1 0 0 0 stick_long g car_angle]);
+N=max(size(x));
+plot(t,x(:,1),'Color',[1,0,0]);hold on;
+plot(t,x(:,2),'Color',[0,1,0]);hold on;
+plot(t,x(:,3),'Color',[0,0,1]);hold on;
+plot(t,x(:,4),'Color',[1,0.6,0.1]);hold on;
+plot(t,x(:,5),'Color',[1,0,0]);hold on;
+plot(t,x(:,6),'Color',[0,1,0]);hold on;
+plot(t,x(:,7),'Color',[1,1,0]);hold on;
+plot(t,x(:,8),'Color',[0,1,1]);hold on;
